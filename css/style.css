@@ -1,0 +1,50 @@
+:root {
+  --marine-blue: hsl(213, 96%, 18%);
+  --purplish-blue: hsl(243, 100%, 62%);
+  --pastel-blue: hsl(228, 100%, 84%);
+  --light-blue: hsl(206, 94%, 87%);
+  --strawberry-red: hsl(354, 84%, 57%);
+  --cool-gray: hsl(231, 11%, 63%);
+  --light-gray: hsl(229, 24%, 87%);
+  --magnolia: hsl(217, 100%, 97%);
+  --alabaster: hsl(231, 100%, 99%);
+  --white: hsl(0, 0%, 100%);
+}
+
+@font-face {
+  font-family: "Ubuntu";
+  src: local("Ubuntu"), url(../assets/fonts/Ubuntu-Regular.ttf);
+}
+html {
+  box-sizing: border-box;
+}
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Ubuntu";
+  font-size: 100%;
+  font-weight: 400;
+}
+img {
+  max-width: 100%;
+  height: auto;
+}
+h1,
+h2,
+h4,
+p {
+  margin: 0;
+}
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  font-style: italic;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
