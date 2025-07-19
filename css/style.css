@@ -40,6 +40,424 @@ h4,
 p {
   margin: 0;
 }
+.card {
+  max-width: 940px;
+  min-height: 600px;
+  margin: 105px auto;
+  padding: 15px;
+  background-color: var(--white);
+  border-radius: 10px;
+  display: flex;
+  gap: 100px;
+  position: relative;
+}
+/* .card__left {
+} */
+/* .card__left-images {
+} */
+.card__left-box {
+  position: absolute;
+  top: 50px;
+  left: 45px;
+}
+.card__left-info {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 30px;
+}
+.card__left-number {
+  width: 35px;
+  height: 35px;
+  border: 1px solid var(--white);
+  color: var(--white);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.info-active .card__left-number {
+  background-color: var(--light-blue);
+  color: var(--marine-blue);
+}
+/* .card__left-text {
+} */
+.card_left-step {
+  color: var(--light-gray);
+  text-transform: uppercase;
+}
+.card__left-title {
+  color: var(--white);
+  text-transform: uppercase;
+}
+.card__right {
+  position: relative;
+  top: 0;
+}
+
+.card__block {
+  padding-block-start: 45px;
+  margin-block-end: 65px;
+  display: none;
+}
+
+.card__right .card__block-active {
+  display: block;
+}
+
+.card__title {
+  font-size: 40px;
+  color: var(--marine-blue);
+  margin-block: 0 20px;
+}
+
+.card__provide {
+  color: var(--cool-gray);
+  line-height: 156%;
+  margin-block: 0 30px;
+}
+
+form {
+  background-color: var(--white);
+}
+
+.input__fields {
+  margin-block-end: 25px;
+}
+.label-form {
+  display: flex;
+  align-items: center;
+}
+.input__fields label {
+  display: inline-block;
+  color: var(--marine-blue);
+  margin-block-end: 10px;
+}
+
+.input__fields .error-input {
+  display: inline-block;
+  color: var(--strawberry-red);
+  margin-block: 0;
+  margin-left: auto;
+  opacity: 0;
+}
+
+.input__fields input[type="text"],
+.input__fields input[type="email"],
+.input__fields input[type="tel"] {
+  display: block;
+  border: 1px solid var(--light-blue);
+  width: 450px;
+  height: 45px;
+  padding-inline-start: 13px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: border-color 0.4s ease;
+}
+
+.input__fields input:hover {
+  border-color: var(--purplish-blue);
+}
+
+input:focus,
+.noerror-block input {
+  outline-color: var(--purplish-blue);
+}
+
+.input__fields input:focus-visible {
+  border: 2px dotted var(--purplish-blue);
+}
+
+.input__fields input::placeholder {
+  font-weight: 500;
+  font-size: 1rem;
+  font-family: inherit;
+}
+
+.error-block .error-input {
+  opacity: 1;
+}
+/* .error-input {
+  border: 2px solid var(--strawberry-red);
+} */
+
+/* для того чтобы, после ввода данных
+в инпуте цвет плейсхолдера - был белый */
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus {
+  -webkit-box-shadow: 0 0 0px 40rem white inset;
+}
+
+.buttons__card {
+  display: flex;
+  justify-content: space-between;
+}
+
+.btn-prev {
+  border: none;
+  background: none;
+  outline: none;
+  opacity: 1;
+  transition: all 0.4s ease;
+  color: hsl(240, 6%, 66%);
+}
+
+.card__right .card__block:first-child .buttons__card .btn-prev {
+  opacity: 0;
+}
+
+.btn-prev:hover {
+  color: var(--marine-blue);
+  cursor: pointer;
+  font-weight: 700;
+}
+.btn-next {
+  width: 125px;
+  height: 45px;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--marine-blue);
+  color: var(--white);
+  border-radius: 10px;
+  cursor: pointer;
+  transition: opacity 450ms ease;
+  &:hover {
+    opacity: 0.8;
+  }
+}
+
+/* Step 2 - Toggle */
+.card__title {
+  font-size: 40px;
+  color: var(--narine-blue);
+  margin-block: 0 20px;
+}
+.card__provide {
+  color: var(--light-gray);
+  margin-block: 0 30px;
+}
+.card__plan {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.card__plan-cart {
+  display: grid;
+  grid-template-columns: repeat(3, 135px);
+  column-gap: 20px;
+}
+.card__plan-selection {
+  min-height: 180px;
+  border: 1px solid var(--light-blue);
+  border-radius: 10px;
+  padding-left: 15px;
+  padding-top: 20px;
+  margin-bottom: 30px;
+  cursor: pointer;
+  transition: border 350ms ease-in;
+  &:hover {
+    border: 2px solid var(--purplish-blue);
+  }
+}
+.card__plan-selection.active {
+  border: 2px solid var(--purplish-blue);
+  background-color: var(--alabaster);
+}
+.card__plan- .card__plan-selection img {
+  display: block;
+  margin-bottom: 45px;
+}
+.card__plan-info {
+  display: flex;
+  flex-direction: column;
+}
+.card__plan-name {
+  margin-bottom: 10px;
+}
+.card__plan-month {
+  margin-bottom: 10px;
+  color: var(--cool-gray);
+}
+.card__plan-year {
+  display: none;
+  margin-bottom: 10px;
+  color: var(--cool-gray);
+}
+.card__plan-free {
+  display: none;
+}
+.plan__toggle {
+  height: 48px;
+  background-color: var(--alabaster);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 110px;
+}
+.plan__toggle label {
+  width: 38px;
+  height: 20px;
+  background: var(--marine-blue);
+  border-radius: 40px;
+  padding: 4px 4px;
+  margin-block-end: 0;
+  cursor: pointer;
+}
+/* .montly {
+} */
+.toggle-input {
+  display: none;
+}
+.toggle-switch {
+  width: 12px;
+  height: 12px;
+  background: var(--white);
+  border-radius: 50%;
+  transition: all 0.5s ease;
+}
+.toggle-input:checked ~ .toggle-switch {
+  transform: translateX(calc(30px - 12px));
+}
+/* Step 3 - checkbox */
+.card__add {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-bottom: 80px;
+}
+.card__add-block {
+  /* position: relative; */
+  height: 80px;
+  width: 450px;
+  border: 2px solid var(--light-gray);
+  border-radius: 8px;
+  padding-left: 15px;
+  padding-block: 20px;
+  display: flex;
+  align-items: center;
+  /* flex-grow: 1; */
+  gap: 20px;
+}
+
+/* Стилизуем label */
+.card__add-check {
+  display: block;
+  position: relative;
+  padding-left: 20px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 16px;
+  user-select: none;
+}
+
+/* Скрываем стандартный <input>: */
+.card__add-check input {
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
+}
+
+/* Рисуем кастомный checkbox в <span>: */
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 20px;
+  height: 20px;
+  border: 2px solid var(--cool-gray);
+  border-radius: 3px;
+}
+
+/* Стилизуем <span> в состоянии hover и в состоянии checked: */
+/* .card__add-check:hover input ~ .checkmark {
+  background-color: var(--pastel-blue);
+} */
+
+.card__add-check input:checked ~ .checkmark {
+  background-color: var(--purplish-blue);
+}
+
+.checkmark::after {
+  position: absolute;
+  content: "";
+  display: none;
+}
+
+.card__add-check input:checked ~ .checkmark::after {
+  display: block;
+}
+
+.card__add-check .checkmark::after {
+  left: 7px;
+  top: 4px;
+  width: 5px;
+  height: 10px;
+  border: solid var(--white);
+  border-width: 0 3px 3px 0;
+  transform: rotate(45deg);
+}
+
+/* применить стили к блоку при включеном чекбоксе */
+.card__add-block.active:has(.card__add-check input:checked) {
+  border-color: var(--purplish-blue);
+  background-color: var(--magnolia);
+}
+/* .cartCheck {
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
+} */
+
+/* .cartCheck + label {
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  user-select: none;
+} */
+
+/* .cartCheck + label::before {
+  content: '';
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+  flex-grow: 0;
+  border: 1px solid var(--cool-gray);
+  border-radius: 3px;
+  margin-right: 0.5em;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 100% 100%;
+} */
+
+/* .cartCheck:checked + label::before {
+  background-color: var(--purplish-blue);
+  background-image: url('../assets/images/icon-checkmark.svg');
+} */
+.card__add-conditions p:first-child {
+  color: var(--marine-blue);
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+.card__add-conditions p:last-child {
+  color: var(--cool-gray);
+}
+.card__add-price {
+  color: var(--purplish-blue);
+  margin-left: auto;
+  margin-right: 20px;
+}
+
+.card__add-yearly {
+  display: none;
+}
 .attribution {
   font-size: 11px;
   text-align: center;
